@@ -1,4 +1,4 @@
-import { chat, complaint, feedback, health } from '../server/handlers.ts';
+import { chat, complaint, feedback, health } from './handlers.ts';
 
 export async function run(kind: 'health' | 'chat' | 'complaint' | 'feedback', req: Request): Promise<Response> {
   if (kind === 'health' && req.method === 'GET') return Response.json(health().body);

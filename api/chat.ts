@@ -1,2 +1,2 @@
-import { run } from './_handler.ts';
+import { run } from '../server/vercelHandler.ts';
 export default (req: Request) => run('chat', req);
